@@ -115,19 +115,22 @@ function spawnCoin() {
      coin = createSprite(Math.round(random(150,400)),50,30,30);
      coin.addImage("coin",coinImg);
      coin.scale=0.1;
-     coin.setCollider("circle",0,0,2);
+     coin.setCollider("circle",0,0,3);
      coin.velocityY=2;
      coin.lifetime = 260;
      coinGroup.add(coin);
-     coin.debug = true;
+     //coin.debug = true;
 
 
-     climber = createSprite(coin.x,110,50,30);
+     climber = createSprite(coin.x,120,450,60);
      climber.addImage("climber",climberImg);
      climber.scale=0.5;
+     climber.setCollider("rectangle", 0, 0,450,60);
+     //climber.debug = true;
      climber.velocityY=2;
      climber.lifetime = 260;
      climbersGroup.add(climber);
+
 
 
      
